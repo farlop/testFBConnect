@@ -19,10 +19,10 @@
 		
         <script>
             function onLoad() {
-				window.addEventListener('error', function (err) {
-					// document.getElementById('res').innerHTML = "Error: " + err.message;
-					// document.getElementById('res').innerHTML = "Error: " + JSON.stringify(err);
-					alert('hi!');					
+				window.addEventListener('error', function (err) {			
+					// alert('hi!');	// CRASH!				
+					// document.getElementById('res').innerHTML = "Error: " + JSON.stringify(err); // CRASH!
+					document.getElementById('res').innerHTML = "Error: " + err.message; // WORKS
 				});
 
                 document.addEventListener("deviceready", onDeviceReady, false);				
